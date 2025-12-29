@@ -1,18 +1,45 @@
 {
+  "title": "Agricultural Calendar",
+  "region": "Morocco – agricultural zone",
+  "today": "Today",
+  "selectMonth": "Select a month",
+  "categoriesTitle": "Categories",
+
+  "temperature": "Temperature",
+  "precipitations": "Precipitation",
+  "sun": "Sunshine",
+  "season": "Season",
+
+  
+  "culturesTitle": "Crops for",
+  "filterByCategory": "Filter by category",
+  "noCulture": "No crops for this category",
+
+  "categories": {
+    "tous": "All",
+    "cereales": "Cereals",
+    "legumes": "Vegetables",
+    "fruits": "Fruit",
+    "aromatiques": "Herbs"
+  },
+
   "cultures": {
+    "title": "Crops",
     "ble": "Wheat",
     "orge": "Barley",
     "tomates": "Tomatoes",
     "laitue": "Lettuce"
   },
+
   "actions": {
     "plantation": "Planting",
     "semis": "Sowing",
-    "recolte": "Harvesting",
+    "recolte": "Harvest",
     "croissance": "Growth",
     "preparation_sol": "Soil preparation",
-    "transplantation": "Transplantation"
+    "transplantation": "Transplanting"
   },
+
   "status": {
     "excellent": "Excellent",
     "bon": "Good",

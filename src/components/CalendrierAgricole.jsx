@@ -161,7 +161,7 @@ const moisTraduits = useMemo(() => {
         {/* ================= CATEGORIES ================= */}
         <div className="bg-white rounded-2xl shadow-lg p-6">
           <h2 className="font-semibold mb-4">
-            {t('categories')}
+            {t('filterByCategory')}
           </h2>
 
           <div className="flex flex-wrap gap-2">
@@ -169,24 +169,26 @@ const moisTraduits = useMemo(() => {
               <button
                 key={cat.id}
                 onClick={() => setCategorieSelectionnee(cat.id)}
-                className={`px-4 py-2 rounded-xl ${
-                  categorieSelectionnee === cat.id
+                className={`flex items-center gap-2 px-4 py-2 rounded-xl
+                  ${categorieSelectionnee === cat.id
                     ? 'bg-green-600 text-white'
-                    : cat.couleur
-                }`}
+                    : cat.couleur}
+                `}
               >
-                {cat.icon} {t(`${cat.id}`)}
-
+                <span>{cat.icon}</span>
+                <span>{t(`categories.${cat.id}`)}</span>
               </button>
             ))}
+
           </div>
         </div>
 
         {/* ================= CULTURES ================= */}
         <div className="bg-white rounded-2xl shadow-lg p-6">
+          
           <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
             <Sprout className="text-green-600" />
-            {t('cultures')} – {moisTraduits[moisSelectionne]}
+            {t('culturesTitle')} – {moisTraduits[moisSelectionne]}
           </h2>
 
           {culturesFiltrees.length === 0 ? (

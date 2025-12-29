@@ -1,10 +1,36 @@
 {
+  "title": "Calendario Agrícola",
+  "region": "Marruecos – zona agrícola",
+  "today": "Hoy",
+  "selectMonth": "Seleccionar un mes",
+  "categoriesTitle": "Categorías",
+
+  "temperature": "Temperatura",
+  "precipitations": "Precipitaciones",
+  "sun": "Insolación",
+  "season": "Temporada",
+
+  
+  "culturesTitle": "Cultivos para",
+  "filterByCategory": "Filtrar por categoría",
+  "noCulture": "No hay cultivos para esta categoría",
+
+  "categories": {
+    "tous": "Todos",
+    "cereales": "Cereales",
+    "legumes": "Verduras",
+    "fruits": "Frutas",
+    "aromatiques": "Aromáticas"
+  },
+
   "cultures": {
+    "title": "Cultivos",
     "ble": "Trigo",
     "orge": "Cebada",
     "tomates": "Tomates",
     "laitue": "Lechuga"
   },
+
   "actions": {
     "plantation": "Plantación",
     "semis": "Siembra",
@@ -13,6 +39,7 @@
     "preparation_sol": "Preparación del suelo",
     "transplantation": "Trasplante"
   },
+
   "status": {
     "excellent": "Excelente",
     "bon": "Bueno",

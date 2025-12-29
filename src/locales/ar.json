@@ -1,18 +1,45 @@
 {
+  "title": "التقويم الزراعي",
+  "region": "المغرب – المنطقة الزراعية",
+  "today": "اليوم",
+  "selectMonth": "إختر الشهر",
+  "categoriesTitle": "الفئات",
+
+  "temperature": "درجة الحرارة",
+  "precipitations": "التساقطات",
+  "sun": "أشعة الشمس",
+  "season": "الموسم",
+
+  
+  "culturesTitle": "محاصيل",
+  "filterByCategory": "تصفية حسب الفئة",
+  "noCulture": "لا توجد محاصيل لهذه الفئة",
+
+  "categories": {
+    "tous": "الكل",
+    "cereales": "الحبوب",
+    "legumes": "الخضروات",
+    "fruits": "الفواكه",
+    "aromatiques": "النباتات العطرية"
+  },
+
   "cultures": {
-    "ble": "قمح",
-    "orge": "شعير",
-    "tomates": "طماطم",
-    "laitue": "خس"
+    "title": "المحاصيل",
+    "ble": "القمح",
+    "orge": "الشعير",
+    "tomates": "الطماطم",
+    "laitue": "الخس"
   },
+
   "actions": {
-    "plantation": "غرس",
-    "semis": "بذر",
-    "recolte": "حصاد",
-    "croissance": "نمو",
+    "plantation": "الغرس",
+    "semis": "البذر",
+    "recolte": "الحصاد",
+    "croissance": "النمو",
     "preparation_sol": "تحضير التربة",
-    "transplantation": "شتل"
+    "transplantation": "الشتل"
   },
+
   "status": {
     "excellent": "ممتاز",
     "bon": "جيد",

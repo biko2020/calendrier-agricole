@@ -10,6 +10,9 @@
   "sun": "Ensoleillement",
   "season": "Saison",
 
+  
+  "culturesTitle": "Cultures pour",
+  "filterByCategory": "Filtrer par catégorie",
   "noCulture": "Aucune culture pour cette catégorie",
 
   "categories": {
