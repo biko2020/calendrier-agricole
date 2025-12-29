@@ -10,6 +10,13 @@
   "sun": "Sunshine",
   "season": "Season",
 
+  "zones": {
+  "aride": "Arid zone",
+  "semi-aride": "Semi-arid zone",
+  "mediterraneenne": "Mediterranean zone",
+  "tropicale": "Tropical zone",
+  "temperee": "Temperate zone"
+},
   
   "culturesTitle": "Crops for",
   "filterByCategory": "Filter by category",

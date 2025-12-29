@@ -10,7 +10,14 @@
   "sun": "أشعة الشمس",
   "season": "الموسم",
 
-  
+  "zones": {
+  "aride": "منطقة قاحلة",
+  "semi-aride": "منطقة شبه قاحلة",
+  "mediterraneenne": "منطقة متوسطية",
+  "tropicale": "منطقة استوائية",
+  "temperee": "منطقة معتدلة"
+},
+
   "culturesTitle": "محاصيل",
   "filterByCategory": "تصفية حسب الفئة",
   "noCulture": "لا توجد محاصيل لهذه الفئة",

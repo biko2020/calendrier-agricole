@@ -9,31 +9,31 @@ import {
   AlertCircle
 } from 'lucide-react'
 import LanguageSwitcher from './LanguageSwitcher'
-
 import { useTranslation } from 'react-i18next'
 import { meteoMensuelle } from '../data/meteo'
 import { categories } from '../data/categories'
 import { culturesParMois } from '../data/cultures'
 import { getStatutCouleur, getStatutTexte } from '../utils/statut'
+import { useAutoLocation } from "../hooks/useAutoLocation"
 
 export default function CalendrierAgricole() {
   const { t, i18n } = useTranslation()
+  const { location, loading, error } = useAutoLocation()
 
-const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear()
 
-const moisTraduits = useMemo(() => {
-  const year = new Date().getFullYear()
-  return Array.from({ length: 12 }, (_, i) =>
-    new Intl.DateTimeFormat(i18n.language, { month: 'long' })
-      .format(new Date(year, i, 1))
-  )
-}, [i18n.language])
-
+  const moisTraduits = useMemo(() => {
+    const year = new Date().getFullYear()
+    return Array.from({ length: 12 }, (_, i) =>
+      new Intl.DateTimeFormat(i18n.language, { month: 'long' })
+        .format(new Date(year, i, 1))
+    )
+  }, [i18n.language])
 
   const [moisSelectionne, setMoisSelectionne] = useState(11)
   const [categorieSelectionnee, setCategorieSelectionnee] = useState('tous')
 
-  /* ===== RTL pour l’arabe ===== */
+  /* ===== RTL pour l'arabe ===== */
   useEffect(() => {
     document.documentElement.dir = i18n.language === 'ar' ? 'rtl' : 'ltr'
   }, [i18n.language])
@@ -59,13 +59,34 @@ const moisTraduits = useMemo(() => {
                 <Calendar className="text-green-600" />
                 {t('title')}
               </h1>
-              <p className="text-gray-600">{t('region')}</p>
+              
+              {/* ===== ZONE AUTO-DÉTECTÉE ===== */}
+              {loading ? (
+                <p className="text-gray-600">📍 Détection de la zone agricole...</p>
+              ) : error ? (
+                <p className="text-red-600">⚠️ {error}</p>
+              ) : (
+                <div className="mt-2">
+                  <p className="text-gray-600">
+                    🌍 {location.country} – {location.region}
+                  </p>
+                  <p className="text-gray-700">
+                    🌱 Zone agricole : <strong>{t(`zones.${location.zoneAgricole}`)}</strong>
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    Température moyenne : {location.avgTemp}°C – Pluie : {location.totalRain} mm
+                  </p>
+                  <button className="mt-1 text-green-700 text-sm underline">
+                    Modifier manuellement
+                  </button>
+                </div>
+              )}
             </div>
 
-              <LanguageSwitcher
-                lang={i18n.language}
-                setLang={lng => i18n.changeLanguage(lng)}
-              />
+            <LanguageSwitcher
+              lang={i18n.language}
+              setLang={lng => i18n.changeLanguage(lng)}
+            />
 
             <div className="text-right">
               <p className="text-sm text-gray-400">{t('today')}</p>
@@ -135,28 +156,27 @@ const moisTraduits = useMemo(() => {
         </div>
 
         {/* ================= MOIS ================= */}
-          <div className="bg-white rounded-2xl shadow-lg p-6">
-            <h2 className="font-semibold mb-4">
-              {t('selectMonth')}
-            </h2>
+        <div className="bg-white rounded-2xl shadow-lg p-6">
+          <h2 className="font-semibold mb-4">
+            {t('selectMonth')}
+          </h2>
 
-            <div className="grid grid-cols-3 md:grid-cols-6 gap-2">
-              {moisTraduits.map((nom, index) => (
-                <button
-                  key={index}
-                  onClick={() => setMoisSelectionne(index)}
-                  className={`py-2 rounded-lg font-medium transition ${
-                    moisSelectionne === index
-                      ? 'bg-green-600 text-white'
-                      : 'bg-gray-100 hover:bg-gray-200'
-                  }`}
-                >
-                  {nom}
-                </button>
-              ))}
-            </div>
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-2">
+            {moisTraduits.map((nom, index) => (
+              <button
+                key={index}
+                onClick={() => setMoisSelectionne(index)}
+                className={`py-2 rounded-lg font-medium transition ${
+                  moisSelectionne === index
+                    ? 'bg-green-600 text-white'
+                    : 'bg-gray-100 hover:bg-gray-200'
+                }`}
+              >
+                {nom}
+              </button>
+            ))}
           </div>
-
+        </div>
 
         {/* ================= CATEGORIES ================= */}
         <div className="bg-white rounded-2xl shadow-lg p-6">
@@ -179,7 +199,6 @@ const moisTraduits = useMemo(() => {
                 <span>{t(`categories.${cat.id}`)}</span>
               </button>
             ))}
-
           </div>
         </div>
 

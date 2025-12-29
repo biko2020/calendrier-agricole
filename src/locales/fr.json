@@ -10,6 +10,13 @@
   "sun": "Ensoleillement",
   "season": "Saison",
 
+    "zones": {
+    "aride": "Zone aride",
+    "semi-aride": "Zone semi-aride",
+    "mediterraneenne": "Zone méditerranéenne",
+    "tropicale": "Zone tropicale",
+    "temperee": "Zone tempérée"
+  },
   
   "culturesTitle": "Cultures pour",
   "filterByCategory": "Filtrer par catégorie",

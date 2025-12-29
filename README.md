@@ -34,6 +34,9 @@ calendrier-agricole/
 │   │   ├── cultures.js
 │   │   └── meteo.js
 │   │
+│   ├── hooks/
+│   │   └── useAutoLocation.js
+│   │
 │   ├── locals/
 │   │   ├── ar.json
 │   │   ├── en.json

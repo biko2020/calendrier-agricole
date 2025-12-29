@@ -10,6 +10,13 @@
   "sun": "Insolación",
   "season": "Temporada",
 
+  "zones": {
+  "aride": "Zona árida",
+  "semi-aride": "Zona semiárida",
+  "mediterraneenne": "Zona mediterránea",
+  "tropicale": "Zona tropical",
+  "temperee": "Zona templada"
+},
   
   "culturesTitle": "Cultivos para",
   "filterByCategory": "Filtrar por categoría",
