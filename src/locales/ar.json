@@ -1,0 +1,21 @@
+{
+  "cultures": {
+    "ble": "قمح",
+    "orge": "شعير",
+    "tomates": "طماطم",
+    "laitue": "خس"
+  },
+  "actions": {
+    "plantation": "غرس",
+    "semis": "بذر",
+    "recolte": "حصاد",
+    "croissance": "نمو",
+    "preparation_sol": "تحضير التربة",
+    "transplantation": "شتل"
+  },
+  "status": {
+    "excellent": "ممتاز",
+    "bon": "جيد",
+    "moyen": "متوسط"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Calendrier Agricole",
+  "region": "Maroc – zone agricole",
+  "today": "Aujourd’hui",
+  "selectMonth": "Choisir un mois",
+  "categoriesTitle": "Catégories",
+
+  "temperature": "Température",
+  "precipitations": "Précipitations",
+  "sun": "Ensoleillement",
+  "season": "Saison",
+
+  "noCulture": "Aucune culture pour cette catégorie",
+
+  "categories": {
+    "tous": "Toutes",
+    "cereales": "Céréales",
+    "legumes": "Légumes",
+    "fruits": "Fruits",
+    "aromatiques": "Aromatiques"
+  },
+
+  "cultures": {
+    "title": "Cultures",
+    "ble": "Blé",
+    "orge": "Orge",
+    "tomates": "Tomates",
+    "laitue": "Laitue"
+  },
+
+  "actions": {
+    "plantation": "Plantation",
+    "semis": "Semis",
+    "recolte": "Récolte",
+    "croissance": "Croissance",
+    "preparation_sol": "Préparation du sol",
+    "transplantation": "Transplantation"
+  },
+
+  "status": {
+    "excellent": "Excellent",
+    "bon": "Bon",
+    "moyen": "Moyen"
+  }
+}

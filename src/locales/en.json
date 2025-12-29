@@ -1,0 +1,21 @@
+{
+  "cultures": {
+    "ble": "Wheat",
+    "orge": "Barley",
+    "tomates": "Tomatoes",
+    "laitue": "Lettuce"
+  },
+  "actions": {
+    "plantation": "Planting",
+    "semis": "Sowing",
+    "recolte": "Harvesting",
+    "croissance": "Growth",
+    "preparation_sol": "Soil preparation",
+    "transplantation": "Transplantation"
+  },
+  "status": {
+    "excellent": "Excellent",
+    "bon": "Good",
+    "moyen": "Average"
+  }
+}

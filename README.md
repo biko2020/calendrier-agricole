@@ -19,26 +19,32 @@ adapté à la région Casablanca-Settat.
 calendrier-agricole/
 │
 ├── public/
-│   └── index.html
+│   └── favicon.svg
 │
 ├── src/
-│   ├── css/
-│   │   └── style.css
-│   │
-│   ├── data/
-│   │   ├── mois.js
-│   │   ├── meteo.js
-│   │   └── cultures.js
+│   ├── assets/
+│   │   └── flags
 │   │
 │   ├── components/
-│   │   ├── Header.jsx
-│   │   ├── Meteo.jsx
-│   │   ├── MonthSelector.jsx
 │   │   ├── CategoryFilter.jsx
-│   │   └── CultureCard.jsx
+│   │   └── LanguageSwitcher.jsx 
+│   │
+│   ├── data/
+│   │   ├── categories.js
+│   │   ├── cultures.js
+│   │   └── meteo.js
+│   │
+│   ├── locals/
+│   │   ├── ar.json
+│   │   ├── en.json
+│   │   ├── es.json
+│   │   └── fr.json
 │   │
 │   ├── utils/
 │   │   └── statut.js
+│   │
+│   ├── i18n.js
+│   │   
 │   │
 │   ├── App.jsx
 │   ├── index.css

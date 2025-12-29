@@ -1,0 +1,21 @@
+{
+  "cultures": {
+    "ble": "Trigo",
+    "orge": "Cebada",
+    "tomates": "Tomates",
+    "laitue": "Lechuga"
+  },
+  "actions": {
+    "plantation": "Plantación",
+    "semis": "Siembra",
+    "recolte": "Cosecha",
+    "croissance": "Crecimiento",
+    "preparation_sol": "Preparación del suelo",
+    "transplantation": "Trasplante"
+  },
+  "status": {
+    "excellent": "Excelente",
+    "bon": "Bueno",
+    "moyen": "Medio"
+  }
+}
