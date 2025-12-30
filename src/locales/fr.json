@@ -5,12 +5,24 @@
   "selectMonth": "Choisir un mois",
   "categoriesTitle": "Catégories",
 
+  "locationError": "Impossible de détecter la localisation automatiquement",
+  "defaultZone": "Zone par défaut",
+  "regionOf": "Région de",
+  "agriculturalZone": "Zone agricole",
+
   "temperature": "Température",
   "precipitations": "Précipitations",
   "sun": "Ensoleillement",
-  "season": "Saison",
 
-    "zones": {
+  "seasons": {
+    "title": "Saison",
+    "winter": "Hiver",
+    "spring": "Printemps",
+    "summer": "Été",
+    "autumn": "Automne"
+  },
+
+  "zones": {
     "aride": "Zone aride",
     "semi-aride": "Zone semi-aride",
     "mediterraneenne": "Zone méditerranéenne",

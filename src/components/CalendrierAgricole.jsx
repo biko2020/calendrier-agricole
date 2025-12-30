@@ -46,6 +46,19 @@ export default function CalendrierAgricole() {
 
   const meteo = meteoMensuelle[moisSelectionne]
 
+  /* ===== ZONE AUTO-DÉTECTÉE ===== */
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 flex items-center justify-center">
+        <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto mb-4"></div>
+          <p className="text-lg font-semibold text-gray-700">📍 Détection de la zone agricole...</p>
+          <p className="text-sm text-gray-500 mt-2">Veuillez patienter</p>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 p-6">
       <div className="max-w-7xl mx-auto space-y-6">
@@ -54,31 +67,42 @@ export default function CalendrierAgricole() {
         <div className="bg-white rounded-2xl shadow-lg p-6">
           <div className="flex flex-col md:flex-row justify-between gap-4">
 
-            <div>
+            <div className="flex-1">
               <h1 className="text-3xl font-bold flex items-center gap-3">
                 <Calendar className="text-green-600" />
                 {t('title')}
               </h1>
               
-              {/* ===== ZONE AUTO-DÉTECTÉE ===== */}
-              {loading ? (
-                <p className="text-gray-600">📍 Détection de la zone agricole...</p>
-              ) : error ? (
-                <p className="text-red-600">⚠️ {error}</p>
+              {/* ===== HEADER : localisation corrigée ===== */}
+              {error ? (
+                <div className="bg-yellow-50 border border-yellow-200 p-4 rounded-xl mt-3">
+                  <p className="font-semibold text-yellow-800 flex items-center gap-2">
+                    <AlertCircle className="w-5 h-5" />
+                    {t('locationError')}
+                  </p>
+                  <p className="text-sm text-gray-600 mt-2">
+                    {t('defaultZone')} :
+                    <strong> {t(`zones.${location?.zoneAgricole || 'mediterraneenne'}`)}</strong>
+                  </p>
+                </div>
               ) : (
-                <div className="mt-2">
-                  <p className="text-gray-600">
-                    🌍 {location.country} – {location.region}
+                <div className="mt-3 bg-green-50 border border-green-200 p-4 rounded-xl">
+                  <p className="text-gray-700 font-medium">
+                    📍 {t('regionOf')} {location.region}, {location.country}
                   </p>
-                  <p className="text-gray-700">
-                    🌱 Zone agricole : <strong>{t(`zones.${location.zoneAgricole}`)}</strong>
+
+                  <p className="text-gray-800 mt-1">
+                    🌱 {t('agriculturalZone')} :
+                    <strong className="text-green-700">
+                      {' '}{t(`zones.${location.zoneAgricole}`)}
+                    </strong>
                   </p>
-                  <p className="text-sm text-gray-500">
-                    Température moyenne : {location.avgTemp}°C – Pluie : {location.totalRain} mm
+
+                  <p className="text-sm text-gray-600 mt-2">
+                    🌡️ {t('temperature')} : {location.temperature ?? '—'}°C ·
+                    💧 {t('precipitations')} : {location.pluie ?? '—'} mm/an
+
                   </p>
-                  <button className="mt-1 text-green-700 text-sm underline">
-                    Modifier manuellement
-                  </button>
                 </div>
               )}
             </div>
@@ -100,8 +124,9 @@ export default function CalendrierAgricole() {
           </div>
 
           {/* ================= METEO ================= */}
-          {meteo && (
+          {location && (
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+
 
               <div className="bg-orange-50 rounded-xl p-4 flex items-center gap-4">
                 <Thermometer className="text-orange-500" />
@@ -110,7 +135,7 @@ export default function CalendrierAgricole() {
                     {t('temperature')}
                   </p>
                   <p className="font-bold text-lg">
-                    {meteo.temperature ?? '—'}
+                    {location.temperature ?? '—'}°C
                   </p>
                 </div>
               </div>
@@ -122,7 +147,8 @@ export default function CalendrierAgricole() {
                     {t('precipitations')}
                   </p>
                   <p className="font-bold text-lg">
-                    {meteo.precipitations ?? '—'}
+                    {location.pluie ?? '—'} mm/an
+              
                   </p>
                 </div>
               </div>
@@ -134,19 +160,21 @@ export default function CalendrierAgricole() {
                     {t('sun')}
                   </p>
                   <p className="font-bold text-lg">
-                    {meteo.ensoleillement ?? '—'}
+                    {location.ensoleillement ?? '—'}
                   </p>
                 </div>
               </div>
 
+              {/* ===== Section MÉTÉO : Saison traduite ===== */}
               <div className="bg-purple-50 rounded-xl p-4 flex items-center gap-4">
                 <Cloud className="text-purple-500" />
                 <div>
                   <p className="text-sm text-gray-600">
-                    {t('season')}
+                    {t('seasons.title')}
                   </p>
                   <p className="font-bold text-lg">
-                    {meteo.saison}
+                    {t(`seasons.${location.saison}`)}
+
                   </p>
                 </div>
               </div>

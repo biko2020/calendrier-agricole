@@ -5,18 +5,30 @@
   "selectMonth": "Select a month",
   "categoriesTitle": "Categories",
 
+  "locationError": "Unable to detect location automatically",
+  "defaultZone": "Default zone",
+  "regionOf": "Region of",
+  "agriculturalZone": "Agricultural zone",
+
   "temperature": "Temperature",
-  "precipitations": "Precipitation",
+  "precipitations": "Precipitations",
   "sun": "Sunshine",
-  "season": "Season",
+
+  "seasons": {
+    "title": "Season",
+    "winter": "Winter",
+    "spring": "Spring",
+    "summer": "Summer",
+    "autumn": "Autumn"
+  },
 
   "zones": {
-  "aride": "Arid zone",
-  "semi-aride": "Semi-arid zone",
-  "mediterraneenne": "Mediterranean zone",
-  "tropicale": "Tropical zone",
-  "temperee": "Temperate zone"
-},
+    "aride": "Arid zone",
+    "semi-aride": "Semi-arid zone",
+    "mediterraneenne": "Mediterranean zone",
+    "tropicale": "Tropical zone",
+    "temperee": "Temperate zone"
+  },
   
   "culturesTitle": "Crops for",
   "filterByCategory": "Filter by category",
@@ -26,8 +38,8 @@
     "tous": "All",
     "cereales": "Cereals",
     "legumes": "Vegetables",
-    "fruits": "Fruit",
-    "aromatiques": "Herbs"
+    "fruits": "Fruits",
+    "aromatiques": "Aromatics"
   },
 
   "cultures": {
@@ -44,7 +56,7 @@
     "recolte": "Harvest",
     "croissance": "Growth",
     "preparation_sol": "Soil preparation",
-    "transplantation": "Transplanting"
+    "transplantation": "Transplantation"
   },
 
   "status": {

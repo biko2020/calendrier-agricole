@@ -2,28 +2,40 @@
   "title": "Calendario Agrícola",
   "region": "Marruecos – zona agrícola",
   "today": "Hoy",
-  "selectMonth": "Seleccionar un mes",
+  "selectMonth": "Elegir un mes",
   "categoriesTitle": "Categorías",
+
+  "locationError": "No se pudo detectar la ubicación automáticamente",
+  "defaultZone": "Zona predeterminada",
+  "regionOf": "Región de",
+  "agriculturalZone": "Zona agrícola",
 
   "temperature": "Temperatura",
   "precipitations": "Precipitaciones",
-  "sun": "Insolación",
-  "season": "Temporada",
+  "sun": "Soleamiento",
+
+  "seasons": {
+    "title": "Estación",
+    "winter": "Invierno",
+    "spring": "Primavera",
+    "summer": "Verano",
+    "autumn": "Otoño"
+  },
 
   "zones": {
-  "aride": "Zona árida",
-  "semi-aride": "Zona semiárida",
-  "mediterraneenne": "Zona mediterránea",
-  "tropicale": "Zona tropical",
-  "temperee": "Zona templada"
-},
+    "aride": "Zona árida",
+    "semi-aride": "Zona semiárida",
+    "mediterraneenne": "Zona mediterránea",
+    "tropicale": "Zona tropical",
+    "temperee": "Zona templada"
+  },
   
   "culturesTitle": "Cultivos para",
   "filterByCategory": "Filtrar por categoría",
   "noCulture": "No hay cultivos para esta categoría",
 
   "categories": {
-    "tous": "Todos",
+    "tous": "Todas",
     "cereales": "Cereales",
     "legumes": "Verduras",
     "fruits": "Frutas",

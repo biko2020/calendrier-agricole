@@ -5,10 +5,23 @@
   "selectMonth": "إختر الشهر",
   "categoriesTitle": "الفئات",
 
+  "locationError": "تعذر تحديد الموقع تلقائيًا",
+  "defaultZone": "المنطقة الافتراضية",
+  "regionOf": "جهة",
+  "agriculturalZone": "منطقة زراعية",
+
+
   "temperature": "درجة الحرارة",
   "precipitations": "التساقطات",
   "sun": "أشعة الشمس",
-  "season": "الموسم",
+
+  "seasons": {
+    "title": "الموسم",
+    "winter": "الشتاء",
+    "spring": "الربيع",
+    "summer": "الصيف",
+    "autumn": "الخريف"
+  },
 
   "zones": {
   "aride": "منطقة قاحلة",
