@@ -10,6 +10,17 @@
   "regionOf": "Région de",
   "agriculturalZone": "Zone agricole",
 
+
+  "autoDetection": "Détection automatique",
+  "manualSelection": "Sélection manuelle",
+  "country": "Pays",
+
+  "countries": {
+    "ma": "Maroc",
+    "fr": "France"
+  },
+
+
   "temperature": "Température",
   "precipitations": "Précipitations",
   "sun": "Ensoleillement",

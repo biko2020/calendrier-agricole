@@ -15,6 +15,9 @@ import { categories } from '../data/categories'
 import { culturesParMois } from '../data/cultures'
 import { getStatutCouleur, getStatutTexte } from '../utils/statut'
 import { useAutoLocation } from "../hooks/useAutoLocation"
+import LocationSelector from './LocationSelector'
+import { detectSeason } from '../hooks/useAutoLocation'
+
 
 export default function CalendrierAgricole() {
   const { t, i18n } = useTranslation()
@@ -32,6 +35,28 @@ export default function CalendrierAgricole() {
 
   const [moisSelectionne, setMoisSelectionne] = useState(11)
   const [categorieSelectionnee, setCategorieSelectionnee] = useState('tous')
+
+  const [mode, setMode] = useState('auto')
+
+const [manualLocation, setManualLocation] = useState({
+  country: 'MA',
+  zoneAgricole: 'mediterraneenne'
+})
+
+    const finalLocation =
+      mode === 'auto'
+        ? location
+        : {
+            country: manualLocation.country,
+            region: t(`countries.${manualLocation.country}`),
+            zoneAgricole: manualLocation.zoneAgricole,
+            temperature: null,
+            pluie: null,
+            ensoleillement: null,
+            saison: detectSeason()
+          }
+
+
 
   /* ===== RTL pour l'arabe ===== */
   useEffect(() => {
@@ -182,6 +207,13 @@ export default function CalendrierAgricole() {
             </div>
           )}
         </div>
+
+        <LocationSelector
+          mode={mode}
+          setMode={setMode}
+          manualLocation={manualLocation}
+          setManualLocation={setManualLocation}
+        />
 
         {/* ================= MOIS ================= */}
         <div className="bg-white rounded-2xl shadow-lg p-6">

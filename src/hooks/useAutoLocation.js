@@ -92,11 +92,10 @@ function detectZoneAgricole(temp, rain) {
   return "temperee";
 }
 
-function detectSeason() {
+export function detectSeason() {
   const m = new Date().getMonth() + 1;
   if ([12, 1, 2].includes(m)) return "winter";
   if ([3, 4, 5].includes(m)) return "spring";
   if ([6, 7, 8].includes(m)) return "summer";
   return "autumn";
 }
-

@@ -26,13 +26,15 @@ calendrier-agricole/
 │   │   └── flags
 │   │
 │   ├── components/
-│   │   ├── CategoryFilter.jsx
-│   │   └── LanguageSwitcher.jsx 
+│   │   ├── CalendrierAgricole.jsx
+│   │   ├── LanguageSwitcher.jsx 
+│   │   └── LocationSelector.jsx
 │   │
 │   ├── data/
 │   │   ├── categories.js
 │   │   ├── cultures.js
-│   │   └── meteo.js
+│   │   ├── meteo.js
+│   │   └── zones.js
 │   │
 │   ├── hooks/
 │   │   └── useAutoLocation.js
