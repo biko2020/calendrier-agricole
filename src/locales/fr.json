@@ -10,16 +10,9 @@
   "regionOf": "Région de",
   "agriculturalZone": "Zone agricole",
 
-
   "autoDetection": "Détection automatique",
   "manualSelection": "Sélection manuelle",
   "country": "Pays",
-
-  "countries": {
-    "ma": "Maroc",
-    "fr": "France"
-  },
-
 
   "temperature": "Température",
   "precipitations": "Précipitations",
@@ -34,11 +27,27 @@
   },
 
   "zones": {
-    "aride": "Zone aride",
-    "semi-aride": "Zone semi-aride",
     "mediterraneenne": "Zone méditerranéenne",
+    "temperee": "Zone tempérée",
     "tropicale": "Zone tropicale",
-    "temperee": "Zone tempérée"
+    "equatoriale": "zones.equatoriale",
+    "semiAride": "Zone semi-aride",
+    "aride": "Zone aride",
+    "continentale": "zones.continentale",
+    "subtropicale": "zones.subtropicale"
+  },
+
+  "countries": {
+    "ma": "Maroc",
+    "fr": "France",
+    "us": "États-Unis",
+    "br": "Brésil",
+    "in": "Inde",
+    "au": "Australie",
+    "eg": "Égypte",
+    "cn": "Chine",
+    "ng": "Nigeria",
+    "ar": "Argentine"
   },
   
   "culturesTitle": "Cultures pour",

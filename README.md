@@ -1,4 +1,4 @@
-# 🌾 Calendrier Agricole – Maroc
+# 🌾 Calendrier Agricole – Agriculture mondiale
 
 Application React affichant un calendrier agricole mensuel
 adapté à la région Casablanca-Settat.
@@ -7,7 +7,7 @@ adapté à la région Casablanca-Settat.
 - Sélection du mois
 - Affichage des cultures
 - Statut agricole (excellent, bon, risqué…)
-- Noms français & arabe
+- Multilingues
 
 ## 📁 Structure
 - `data/` : données agricoles

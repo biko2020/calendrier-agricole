@@ -4,17 +4,20 @@
   "today": "اليوم",
   "selectMonth": "إختر الشهر",
   "categoriesTitle": "الفئات",
-
   "locationError": "تعذر تحديد الموقع تلقائيًا",
   "defaultZone": "المنطقة الافتراضية",
   "regionOf": "جهة",
   "agriculturalZone": "منطقة زراعية",
-
-
+  "autoDetection": "الكشف التلقائي",
+  "manualSelection": "الاختيار اليدوي",
+  "country": "البلد",
+  "countries": {
+    "ma": "المغرب",
+    "fr": "فرنسا"
+  },
   "temperature": "درجة الحرارة",
   "precipitations": "التساقطات",
   "sun": "أشعة الشمس",
-
   "seasons": {
     "title": "الموسم",
     "winter": "الشتاء",
@@ -22,19 +25,16 @@
     "summer": "الصيف",
     "autumn": "الخريف"
   },
-
   "zones": {
-  "aride": "منطقة قاحلة",
-  "semi-aride": "منطقة شبه قاحلة",
-  "mediterraneenne": "منطقة متوسطية",
-  "tropicale": "منطقة استوائية",
-  "temperee": "منطقة معتدلة"
-},
-
+    "aride": "منطقة قاحلة",
+    "semi-aride": "منطقة شبه قاحلة",
+    "mediterraneenne": "منطقة متوسطية",
+    "tropicale": "منطقة استوائية",
+    "temperee": "منطقة معتدلة"
+  },
   "culturesTitle": "محاصيل",
   "filterByCategory": "تصفية حسب الفئة",
   "noCulture": "لا توجد محاصيل لهذه الفئة",
-
   "categories": {
     "tous": "الكل",
     "cereales": "الحبوب",
@@ -42,7 +42,6 @@
     "fruits": "الفواكه",
     "aromatiques": "النباتات العطرية"
   },
-
   "cultures": {
     "title": "المحاصيل",
     "ble": "القمح",
@@ -50,7 +49,6 @@
     "tomates": "الطماطم",
     "laitue": "الخس"
   },
-
   "actions": {
     "plantation": "الغرس",
     "semis": "البذر",
@@ -59,7 +57,6 @@
     "preparation_sol": "تحضير التربة",
     "transplantation": "الشتل"
   },
-
   "status": {
     "excellent": "ممتاز",
     "bon": "جيد",
