@@ -263,7 +263,7 @@ export default function CalendrierAgricole() {
                   </div>
 
                   <p className="text-sm text-gray-600 mb-3">
-                    {t(`${culture.key}_desc`)} {/* Optionnel : description détaillée */}
+                    {t(`cultures.${culture.key}_desc`)} {/* Optionnel : description détaillée */}
                   </p>
 
                   <div className="space-y-1">

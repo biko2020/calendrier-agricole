@@ -12,12 +12,13 @@ export const COUNTRIES = [
   // Ajouter plus 
 ];
 
+
 export const ZONES = {
   mediterraneenne: 'zones.mediterraneenne',
   temperee: 'zones.temperee',
   tropicale: 'zones.tropicale',
   equatoriale: 'zones.equatoriale',
-  semiAride: 'zones.semi-aride',
+  semiAride: 'zones.semiAride',       
   aride: 'zones.aride',
   continentale: 'zones.continentale',
   subtropicale: 'zones.subtropicale'

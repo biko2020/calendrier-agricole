@@ -87,7 +87,7 @@ const sum = arr => arr.reduce((a, b) => a + b, 0);
 
 function detectZoneAgricole(temp, rain) {
   if (rain < 250) return "aride";
-  if (rain < 500) return "semi-aride";
+  if (rain < 500) return "semiAride";
   if (temp > 15) return "mediterraneenne";
   return "temperee";
 }

@@ -26,16 +26,16 @@
     "autumn": "Automne"
   },
 
-  "zones": {
-    "mediterraneenne": "Zone méditerranéenne",
-    "temperee": "Zone tempérée",
-    "tropicale": "Zone tropicale",
-    "equatoriale": "zones.equatoriale",
-    "semiAride": "Zone semi-aride",
-    "aride": "Zone aride",
-    "continentale": "zones.continentale",
-    "subtropicale": "zones.subtropicale"
-  },
+"zones": {
+  "mediterraneenne": "Zone méditerranéenne",
+  "temperee": "Zone tempérée",
+  "tropicale": "Zone tropicale",
+  "equatoriale": "Zone équatoriale",
+  "semiAride": "Zone semi-aride",
+  "aride": "Zone aride",
+  "continentale": "Zone continentale",
+  "subtropicale": "Zone subtropicale"
+},
 
   "countries": {
     "ma": "Maroc",
