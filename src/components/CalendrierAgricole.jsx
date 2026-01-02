@@ -257,7 +257,7 @@ export default function CalendrierAgricole() {
                 <div key={i} className="border rounded-xl p-5 hover:shadow-lg transition-shadow">
                   <div className="flex justify-between items-start mb-3">
                     <h3 className="font-bold text-lg">
-                      {culture.icon} {t(`${culture.key}`)}
+                      {culture.icon} {t(`cultures.${culture.key}`)}
                     </h3>
                     <span className={`w-4 h-4 rounded-full ${getStatutCouleur(culture.statut)}`} />
                   </div>

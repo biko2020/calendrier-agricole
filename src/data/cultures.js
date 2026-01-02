@@ -203,7 +203,7 @@ export const culturesParZoneEtMois = {
   // Cultures emblématiques : Dattes (palmier), Grenades (fruit), Figue de barbarie
   0: [ // Janvier
       { key: 'dattes', type: 'fruits', actionKey: 'croissance', statut: 'bon', icon: '🌴' },
-      { key: 'grenades', type: 'fruits', actionKey: 'croissance', statut: 'bon', icon: '🥭' } 
+      { key: 'grenades', type: 'fruits', actionKey: 'croissance', statut: 'bon', icon: '🥭' }
   ],
   1: [  // Février
     { key: 'dattes', type: 'fruits', actionKey: 'croissance', statut: 'bon', icon: '🌴' },
