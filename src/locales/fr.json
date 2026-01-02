@@ -54,34 +54,78 @@
   "filterByCategory": "Filtrer par catégorie",
   "noCulture": "Aucune culture pour cette catégorie",
 
-  "categories": {
-    "tous": "Toutes",
-    "cereales": "Céréales",
-    "legumes": "Légumes",
-    "fruits": "Fruits",
-    "aromatiques": "Aromatiques"
-  },
+"categories": {
+  "tous": "Toutes",
+  "cereales": "Céréales",
+  "legumes": "Légumes",
+  "fruits": "Fruits",
+  "aromatiques": "Aromatiques",
+  "legumineuses": "Légumineuses"
+},
 
-  "cultures": {
-    "title": "Cultures",
-    "ble": "Blé",
-    "orge": "Orge",
-    "tomates": "Tomates",
-    "laitue": "Laitue"
-  },
+"cultures": {
+  "ble": "Blé",
+  "orge": "Orge",
+  "tomates": "Tomates",
+  "pommes_de_terre": "Pommes de terre",
+  "carottes": "Carottes",
+  "laitue": "Laitue",
+  "epinards": "Épinards",
+  "navets": "Navets",
+  "courgettes": "Courgettes",
+  "aubergines": "Aubergines",
+  "poivrons": "Poivrons",
+  "piments": "Piments",
+  "haricots": "Haricots",
+  "mais": "Maïs",
+  "pasteque": "Pastèque",
+  "melon": "Melon",
+  "basilic": "Basilic",
+  "coriandre": "Coriandre",
+  "persil": "Persil",
+  "pois_chiches": "Pois chiches",
+  "feves": "Fèves",
+  "riz": "Riz",
+  "manioc": "Manioc",
+  "banane": "Banane",
+  "dattes": "Dattes",
+  "sorgho": "Sorgho",
+  "mil": "Mil",
+  "arachides": "Arachides",
+  "cafe": "Café",
+  "canne_a_sucre": "Canne à sucre",
+  "soja": "Soja",
+  "ail": "Ail",
+  "oignons": "Oignons",
+  "salades": "Salades",
+  "grenadier": "Grenadier",
+  "grenades": "Grenades",
+  "figue_barbarie": "Figue de barbarie",
+  "pois": "Pois"
+},
 
-  "actions": {
-    "plantation": "Plantation",
-    "semis": "Semis",
-    "recolte": "Récolte",
-    "croissance": "Croissance",
-    "preparation_sol": "Préparation du sol",
-    "transplantation": "Transplantation"
-  },
 
-  "status": {
-    "excellent": "Excellent",
-    "bon": "Bon",
-    "moyen": "Moyen"
-  }
+"actions": {
+  "plantation": "Plantation",
+  "semis": "Semis",
+  "transplantation": "Transplantation",
+  "croissance": "Croissance",
+  "recolte": "Récolte",
+  "preparation_sol": "Préparation du sol",
+  "pollinisation": "Pollinisation",
+  "developpement": "Développement",
+  "maturite": "Maturation",
+  "recolte_debut": "Début de récolte",
+  "recolte_fin": "Fin de récolte",
+  "entretien": "Entretien",
+  "semis_sous_abri": "Semis sous abri",
+  "recolte_primeur": "Récolte primeur"
+},
+
+"status": {
+  "excellent": "Excellent",
+  "bon": "Bon",
+  "risque": "Risqué",
+  "deconseille": "Déconseillé"
+}
 }

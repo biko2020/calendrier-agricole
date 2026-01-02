@@ -1,8 +1,12 @@
+
+// src/data/cultures.js
+
 export const culturesParZoneEtMois = {
-  mediterraneenne: { // Ex: Maroc (Casablanca-Settat), Italie du Sud, Californie, Chili central – Hivers doux/pluvieux, étés chauds/secs
+  mediterraneenne: {
+    // Maroc (Casablanca-Settat), Italie du Sud, Californie, Espagne, Chili
     0: [ // Janvier
-      { key: 'orge', type: 'cereales', actionKey: 'croissance', statut: 'excellent', icon: '🌾' },
       { key: 'ble', type: 'cereales', actionKey: 'croissance', statut: 'excellent', icon: '🌾' },
+      { key: 'orge', type: 'cereales', actionKey: 'croissance', statut: 'excellent', icon: '🌾' },
       { key: 'feves', type: 'legumineuses', actionKey: 'plantation', statut: 'excellent', icon: '🌱' },
       { key: 'epinards', type: 'legumes', actionKey: 'plantation', statut: 'excellent', icon: '🥬' },
       { key: 'navets', type: 'legumes', actionKey: 'plantation', statut: 'excellent', icon: '🥕' },
@@ -41,15 +45,16 @@ export const culturesParZoneEtMois = {
     ],
     7: [ // Août
       { key: 'mais', type: 'cereales', actionKey: 'recolte', statut: 'bon', icon: '🌽' },
-      { key: 'pasteque', type: 'fruits', actionKey: 'recolte', statut: 'excellent', icon: '🍉' }
+      { key: 'pasteque', type: 'fruits', actionKey: 'recolte', statut: 'excellent', icon: '🍉' },
+      { key: 'melon', type: 'fruits', actionKey: 'recolte', statut: 'excellent', icon: '🍈' }
     ],
     8: [ // Septembre
       { key: 'ble', type: 'cereales', actionKey: 'preparation_sol', statut: 'bon', icon: '🌾' },
       { key: 'orge', type: 'cereales', actionKey: 'preparation_sol', statut: 'bon', icon: '🌾' }
     ],
     9: [ // Octobre
-      { key: 'ble', type: 'cereales', actionKey: 'semis', statut: 'excellent', icon: '🌱' },
-      { key: 'orge', type: 'cereales', actionKey: 'semis', statut: 'excellent', icon: '🌱' },
+      { key: 'ble', type: 'cereales', actionKey: 'semis', statut: 'excellent', icon: '🌾' },
+      { key: 'orge', type: 'cereales', actionKey: 'semis', statut: 'excellent', icon: '🌾' },
       { key: 'feves', type: 'legumineuses', actionKey: 'semis', statut: 'excellent', icon: '🌱' }
     ],
     10: [ // Novembre
@@ -57,18 +62,19 @@ export const culturesParZoneEtMois = {
       { key: 'epinards', type: 'legumes', actionKey: 'plantation', statut: 'excellent', icon: '🥬' }
     ],
     11: [ // Décembre
-      { key: 'ble', type: 'cereales', actionKey: 'croissance', statut: 'excellent', icon: '🌿' },
-      { key: 'orge', type: 'cereales', actionKey: 'croissance', statut: 'excellent', icon: '🌿' },
+      { key: 'ble', type: 'cereales', actionKey: 'croissance', statut: 'excellent', icon: '🌾' },
+      { key: 'orge', type: 'cereales', actionKey: 'croissance', statut: 'excellent', icon: '🌾' },
       { key: 'laitue', type: 'legumes', actionKey: 'plantation', statut: 'excellent', icon: '🥬' }
     ]
   },
-  temperee: { // Ex: France, Europe centrale, USA Midwest – Saisons marquées, hivers froids
-    0: [ // Janvier - Repos hivernal
+
+  temperee: {
+    // France, Allemagne, USA Midwest, Canada – Hivers froids, étés chauds
+    0: [ // Janvier
       { key: 'ail', type: 'legumes', actionKey: 'plantation', statut: 'bon', icon: '🧄' }
     ],
     1: [ // Février
-      { key: 'oignons', type: 'legumes', actionKey: 'semis', statut: 'bon', icon: '🧅' },
-      { key: 'echalotes', type: 'legumes', actionKey: 'plantation', statut: 'excellent', icon: '🧅' }
+      { key: 'oignons', type: 'legumes', actionKey: 'semis', statut: 'bon', icon: '🧅' }
     ],
     2: [ // Mars
       { key: 'pommes_de_terre', type: 'legumes', actionKey: 'plantation', statut: 'excellent', icon: '🥔' },
@@ -91,7 +97,7 @@ export const culturesParZoneEtMois = {
     ],
     6: [ // Juillet
       { key: 'tomates', type: 'legumes', actionKey: 'recolte', statut: 'excellent', icon: '🍅' },
-      { key: 'haricots', type: 'legumes', actionKey: 'recolte', statut: 'excellent', icon: '🌱' }
+      { key: 'haricots', type: 'legumineuses', actionKey: 'recolte', statut: 'excellent', icon: '🌱' }
     ],
     7: [ // Août
       { key: 'mais', type: 'cereales', actionKey: 'recolte', statut: 'excellent', icon: '🌽' }
@@ -104,15 +110,15 @@ export const culturesParZoneEtMois = {
       { key: 'ail', type: 'legumes', actionKey: 'plantation', statut: 'excellent', icon: '🧄' },
       { key: 'oignons', type: 'legumes', actionKey: 'plantation', statut: 'bon', icon: '🧅' }
     ],
-    10: [ // Novembre - Préparation hiver
+    10: [ // Novembre
       { key: 'feves', type: 'legumineuses', actionKey: 'semis', statut: 'bon', icon: '🌱' }
     ],
-    11: [ // Décembre - Repos
-      // Peu d'activités, protection des cultures persistantes
-    ]
+    11: [] // Décembre - Repos hivernal
   },
-  tropicale: { // Ex: Brésil, Inde, Afrique centrale – Culture presque toute l'année, saisons humides/sèches
-    0: [ // Janvier (saison humide dans beaucoup de zones)
+
+  tropicale: {
+    // Brésil, Inde, Indonésie, Nigeria – Saisons humides/sèches
+    0: [
       { key: 'riz', type: 'cereales', actionKey: 'plantation', statut: 'excellent', icon: '🌾' },
       { key: 'manioc', type: 'legumes', actionKey: 'plantation', statut: 'excellent', icon: '🥔' },
       { key: 'banane', type: 'fruits', actionKey: 'croissance', statut: 'excellent', icon: '🍌' },
@@ -120,7 +126,7 @@ export const culturesParZoneEtMois = {
     ],
     1: [
       { key: 'riz', type: 'cereales', actionKey: 'croissance', statut: 'excellent', icon: '🌾' },
-      { key: 'soja', type: 'legumineuses', actionKey: 'croissance', statut: 'bon', icon: '🌱' }
+      { key: 'soja', type: 'legumineuses', actionKey: 'croissance', statut: 'excellent', icon: '🌱' }
     ],
     2: [
       { key: 'mais', type: 'cereales', actionKey: 'croissance', statut: 'excellent', icon: '🌽' },
@@ -145,7 +151,7 @@ export const culturesParZoneEtMois = {
       { key: 'soja', type: 'legumineuses', actionKey: 'recolte', statut: 'excellent', icon: '🌱' }
     ],
     8: [
-      { key: 'cafe', type: 'fruits', actionKey: 'recolte', statut: 'bon', icon: '☕' }
+      { key: 'cafe', type: 'fruits', actionKey: 'recolte', statut: 'excellent', icon: '☕' }
     ],
     9: [
       { key: 'riz', type: 'cereales', actionKey: 'croissance', statut: 'excellent', icon: '🌾' }
@@ -157,8 +163,10 @@ export const culturesParZoneEtMois = {
       { key: 'banane', type: 'fruits', actionKey: 'croissance', statut: 'excellent', icon: '🍌' }
     ]
   },
-  semiAride: { // Ex: Zones intérieures Maroc, Sahel – Irrigation essentielle, cultures résistantes
-    0: [ // Janvier - Saison fraîche
+
+  semiAride: {
+    // Sahel, intérieur Maroc, Australie centrale – Cultures résistantes à la sécheresse
+    0: [
       { key: 'ble', type: 'cereales', actionKey: 'croissance', statut: 'bon', icon: '🌾' },
       { key: 'pois_chiches', type: 'legumineuses', actionKey: 'croissance', statut: 'bon', icon: '🌱' }
     ],
@@ -174,7 +182,7 @@ export const culturesParZoneEtMois = {
     5: [
       { key: 'sorgho', type: 'cereales', actionKey: 'croissance', statut: 'bon', icon: '🌾' }
     ],
-    6: [ // Juillet - Chaud/sec
+    6: [
       { key: 'sorgho', type: 'cereales', actionKey: 'croissance', statut: 'risque', icon: '🌾' }
     ],
     7: [],
@@ -182,55 +190,67 @@ export const culturesParZoneEtMois = {
       { key: 'ble', type: 'cereales', actionKey: 'preparation_sol', statut: 'bon', icon: '🌾' }
     ],
     9: [
-      { key: 'ble', type: 'cereales', actionKey: 'semis', statut: 'excellent', icon: '🌱' }
+      { key: 'ble', type: 'cereales', actionKey: 'semis', statut: 'excellent', icon: '🌾' }
     ],
     10: [],
     11: [
       { key: 'pois_chiches', type: 'legumineuses', actionKey: 'semis', statut: 'bon', icon: '🌱' }
     ]
   },
-  aride: { // Ex: Sahara, oasis – Très limité, dépendant de l'irrigation (oasis)
-    0: [ // Croissance palmier toute l'année
+
+  aride: {
+  // Déserts (Sahara, Arabie, Namibie) – Oasis uniquement
+  // Cultures emblématiques : Dattes (palmier), Grenades (fruit), Figue de barbarie
+  0: [ // Janvier
       { key: 'dattes', type: 'fruits', actionKey: 'croissance', statut: 'bon', icon: '🌴' },
-      { key: 'grenadier', type: 'fruits', actionKey: 'croissance', statut: 'bon', icon: '🍈' }
-    ],
-    1: [
-      { key: 'dattes', type: 'fruits', actionKey: 'croissance', statut: 'bon', icon: '🌴' }
-    ],
-    2: [
-      { key: 'dattes', type: 'fruits', actionKey: 'pollinisation', statut: 'excellent', icon: '🌴' }
-    ],
-    3: [
-      { key: 'dattes', type: 'fruits', actionKey: 'developpement', statut: 'excellent', icon: '🌴' }
-    ],
-    4: [
-      { key: 'dattes', type: 'fruits', actionKey: 'maturite', statut: 'excellent', icon: '🌴' }
-    ],
-    5: [
-      { key: 'dattes', type: 'fruits', actionKey: 'maturite', statut: 'excellent', icon: '🌴' }
-    ],
-    6: [
-      { key: 'dattes', type: 'fruits', actionKey: 'recolte_debut', statut: 'bon', icon: '🌴' }
-    ],
-    7: [
-      { key: 'dattes', type: 'fruits', actionKey: 'recolte', statut: 'excellent', icon: '🌴' }
-    ],
-    8: [
-      { key: 'dattes', type: 'fruits', actionKey: 'recolte', statut: 'excellent', icon: '🌴' }
-    ],
-    9: [
-      { key: 'dattes', type: 'fruits', actionKey: 'recolte_fin', statut: 'excellent', icon: '🌴' }
-    ],
-    10: [
-      { key: 'dattes', type: 'fruits', actionKey: 'entretien', statut: 'bon', icon: '🌴' }
-    ],
-    11: [
-      { key: 'dattes', type: 'fruits', actionKey: 'croissance', statut: 'bon', icon: '🌴' }
-    ]
+      { key: 'grenades', type: 'fruits', actionKey: 'croissance', statut: 'bon', icon: '🥭' } 
+  ],
+  1: [  // Février
+    { key: 'dattes', type: 'fruits', actionKey: 'croissance', statut: 'bon', icon: '🌴' },
+    { key: 'figue_barbarie', type: 'fruits', actionKey: 'croissance', statut: 'excellent', icon: '🌵' }
+  ],
+  2: [  // Mars - Pollination
+    { key: 'dattes', type: 'fruits', actionKey: 'pollinisation', statut: 'excellent', icon: '🌴' }
+  ],
+  3: [  // Avril
+    { key: 'dattes', type: 'fruits', actionKey: 'developpement', statut: 'excellent', icon: '🌴' },
+    { key: 'grenades', type: 'fruits', actionKey: 'developpement', statut: 'bon', icon: '🥭' }
+  ],
+  4: [  // Mai
+    { key: 'dattes', type: 'fruits', actionKey: 'maturite', statut: 'excellent', icon: '🌴' }
+  ],
+  5: [  // Juin
+    { key: 'dattes', type: 'fruits', actionKey: 'maturite', statut: 'excellent', icon: '🌴' },
+    { key: 'figue_barbarie', type: 'fruits', actionKey: 'maturite', statut: 'bon', icon: '🌵' }
+  ],
+  6: [  // Juillet - Début récolte dattes
+    { key: 'dattes', type: 'fruits', actionKey: 'recolte_debut', statut: 'excellent', icon: '🌴' }
+  ],
+  7: [  // Août - Pleine récolte dattes
+    { key: 'dattes', type: 'fruits', actionKey: 'recolte', statut: 'excellent', icon: '🌴' },
+    { key: 'grenades', type: 'fruits', actionKey: 'recolte', statut: 'excellent', icon: '🥭' }
+  ],
+  8: [  // Septembre
+    { key: 'dattes', type: 'fruits', actionKey: 'recolte', statut: 'excellent', icon: '🌴' }
+  ],
+  9: [  // Octobre - Fin récolte dattes
+    { key: 'dattes', type: 'fruits', actionKey: 'recolte_fin', statut: 'excellent', icon: '🌴' },
+    { key: 'figue_barbarie', type: 'fruits', actionKey: 'recolte', statut: 'bon', icon: '🌵' }
+  ],
+  10: [ // Novembre
+    { key: 'dattes', type: 'fruits', actionKey: 'entretien', statut: 'bon', icon: '🌴' },
+    { key: 'grenades', type: 'fruits', actionKey: 'entretien', statut: 'bon', icon: '🥭' }
+  ],
+  11: [ // Décembre
+    { key: 'dattes', type: 'fruits', actionKey: 'croissance', statut: 'bon', icon: '🌴' }
+  ]
   }
 };
 
-// Fallback : si la zone n'est pas définie ou inconnue, on utilise la zone méditerranéenne par défaut
+// Fallback sécurisé
 export const getCulturesForZone = (zone, mois) => {
-  return culturesParZoneEtMois[zone]?.[mois] || culturesParZoneEtMois.mediterraneenne[mois] || [];
+  const cultures = culturesParZoneEtMois[zone]?.[mois];
+  if (cultures && cultures.length > 0) return cultures;
+  // Fallback vers méditerranéenne si zone inconnue ou mois vide
+  return culturesParZoneEtMois.mediterraneenne?.[mois] || [];
 };

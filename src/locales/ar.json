@@ -4,20 +4,20 @@
   "today": "اليوم",
   "selectMonth": "إختر الشهر",
   "categoriesTitle": "الفئات",
+
   "locationError": "تعذر تحديد الموقع تلقائيًا",
   "defaultZone": "المنطقة الافتراضية",
   "regionOf": "جهة",
   "agriculturalZone": "منطقة زراعية",
+
   "autoDetection": "الكشف التلقائي",
   "manualSelection": "الاختيار اليدوي",
   "country": "البلد",
-  "countries": {
-    "ma": "المغرب",
-    "fr": "فرنسا"
-  },
+
   "temperature": "درجة الحرارة",
   "precipitations": "التساقطات",
   "sun": "أشعة الشمس",
+
   "seasons": {
     "title": "الموسم",
     "winter": "الشتاء",
@@ -25,41 +25,106 @@
     "summer": "الصيف",
     "autumn": "الخريف"
   },
+
   "zones": {
-    "aride": "منطقة قاحلة",
-    "semi-aride": "منطقة شبه قاحلة",
     "mediterraneenne": "منطقة متوسطية",
-    "tropicale": "منطقة استوائية",
-    "temperee": "منطقة معتدلة"
+    "temperee": "منطقة معتدلة",
+    "tropicale": "منطقة مدارية",
+    "equatoriale": "منطقة استوائية",
+    "semiAride": "منطقة شبه قاحلة",
+    "aride": "منطقة قاحلة",
+    "continentale": "منطقة قارية",
+    "subtropicale": "منطقة شبه مدارية"
   },
-  "culturesTitle": "محاصيل",
+
+  "countries": {
+    "ma": "المغرب",
+    "fr": "فرنسا",
+    "us": "الولايات المتحدة",
+    "br": "البرازيل",
+    "in": "الهند",
+    "au": "أستراليا",
+    "eg": "مصر",
+    "cn": "الصين",
+    "ng": "نيجيريا",
+    "ar": "الأرجنتين"
+  },
+  
+  "culturesTitle": "محاصيل لـ",
   "filterByCategory": "تصفية حسب الفئة",
   "noCulture": "لا توجد محاصيل لهذه الفئة",
+
   "categories": {
     "tous": "الكل",
     "cereales": "الحبوب",
     "legumes": "الخضروات",
     "fruits": "الفواكه",
-    "aromatiques": "النباتات العطرية"
+    "aromatiques": "النباتات العطرية",
+    "legumineuses": "البقوليات"
   },
+
   "cultures": {
-    "title": "المحاصيل",
     "ble": "القمح",
     "orge": "الشعير",
     "tomates": "الطماطم",
-    "laitue": "الخس"
+    "pommes_de_terre": "البطاطس",
+    "carottes": "الجزر",
+    "laitue": "الخس",
+    "epinards": "السبانخ",
+    "navets": "اللفت",
+    "courgettes": "الكوسة",
+    "aubergines": "الباذنجان",
+    "poivrons": "الفلفل الحلو",
+    "piments": "الفلفل الحار",
+    "haricots": "الفاصوليا",
+    "mais": "الذرة",
+    "pasteque": "البطيخ الأحمر",
+    "melon": "البطيخ الأصفر",
+    "basilic": "الريحان",
+    "coriandre": "الكزبرة",
+    "persil": "المعدنوس",
+    "pois_chiches": "الحمص",
+    "feves": "الفول",
+    "riz": "الأرز",
+    "manioc": "المنيهوت",
+    "banane": "الموز",
+    "dattes": "التمر",
+    "sorgho": "الذرة الرفيعة",
+    "mil": "الدخن",
+    "arachides": "الفول السوداني",
+    "cafe": "القهوة",
+    "canne_a_sucre": "قصب السكر",
+    "soja": "فول الصويا",
+    "ail": "الثوم",
+    "oignons": "البصل",
+    "salades": "السلطات",
+    "grenadier": "شجرة الرمان",
+    "grenades": "الرمان",
+    "figue_barbarie": "تين شوكي",
+    "pois": "البازلاء"
   },
+
   "actions": {
     "plantation": "الغرس",
     "semis": "البذر",
-    "recolte": "الحصاد",
+    "transplantation": "الشتل",
     "croissance": "النمو",
+    "recolte": "الحصاد",
     "preparation_sol": "تحضير التربة",
-    "transplantation": "الشتل"
+    "pollinisation": "التلقيح",
+    "developpement": "التطور",
+    "maturite": "النضج",
+    "recolte_debut": "بداية الحصاد",
+    "recolte_fin": "نهاية الحصاد",
+    "entretien": "الصيانة",
+    "semis_sous_abri": "البذر تحت الغطاء",
+    "recolte_primeur": "حصاد باكر"
   },
+
   "status": {
     "excellent": "ممتاز",
     "bon": "جيد",
-    "moyen": "متوسط"
+    "risque": "محفوف بالمخاطر",
+    "deconseille": "غير مستحسن"
   }
 }

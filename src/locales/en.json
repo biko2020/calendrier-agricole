@@ -14,11 +14,6 @@
   "manualSelection": "Manual selection",
   "country": "Country",
 
-  "countries": {
-    "ma": "Morocco",
-    "fr": "France"
-  },
-
   "temperature": "Temperature",
   "precipitations": "Precipitation",
   "sun": "Sunshine",
@@ -32,11 +27,27 @@
   },
 
   "zones": {
-    "aride": "Arid zone",
-    "semi-aride": "Semi-arid zone",
     "mediterraneenne": "Mediterranean zone",
+    "temperee": "Temperate zone",
     "tropicale": "Tropical zone",
-    "temperee": "Temperate zone"
+    "equatoriale": "Equatorial zone",
+    "semiAride": "Semi-arid zone",
+    "aride": "Arid zone",
+    "continentale": "Continental zone",
+    "subtropicale": "Subtropical zone"
+  },
+
+  "countries": {
+    "ma": "Morocco",
+    "fr": "France",
+    "us": "United States",
+    "br": "Brazil",
+    "in": "India",
+    "au": "Australia",
+    "eg": "Egypt",
+    "cn": "China",
+    "ng": "Nigeria",
+    "ar": "Argentina"
   },
   
   "culturesTitle": "Crops for",
@@ -48,29 +59,72 @@
     "cereales": "Cereals",
     "legumes": "Vegetables",
     "fruits": "Fruits",
-    "aromatiques": "Aromatics"
+    "aromatiques": "Herbs",
+    "legumineuses": "Legumes"
   },
 
   "cultures": {
-    "title": "Crops",
     "ble": "Wheat",
     "orge": "Barley",
     "tomates": "Tomatoes",
-    "laitue": "Lettuce"
+    "pommes_de_terre": "Potatoes",
+    "carottes": "Carrots",
+    "laitue": "Lettuce",
+    "epinards": "Spinach",
+    "navets": "Turnips",
+    "courgettes": "Zucchini",
+    "aubergines": "Eggplants",
+    "poivrons": "Bell peppers",
+    "piments": "Hot peppers",
+    "haricots": "Beans",
+    "mais": "Corn",
+    "pasteque": "Watermelon",
+    "melon": "Melon",
+    "basilic": "Basil",
+    "coriandre": "Cilantro",
+    "persil": "Parsley",
+    "pois_chiches": "Chickpeas",
+    "feves": "Fava beans",
+    "riz": "Rice",
+    "manioc": "Cassava",
+    "banane": "Banana",
+    "dattes": "Dates",
+    "sorgho": "Sorghum",
+    "mil": "Millet",
+    "arachides": "Peanuts",
+    "cafe": "Coffee",
+    "canne_a_sucre": "Sugar cane",
+    "soja": "Soybean",
+    "ail": "Garlic",
+    "oignons": "Onions",
+    "salades": "Salads",
+    "grenadier": "Pomegranate",
+    "grenades": "Pomegranates",
+    "figue_barbarie": "Prickly pear",
+    "pois": "Peas"
   },
 
   "actions": {
     "plantation": "Planting",
     "semis": "Sowing",
-    "recolte": "Harvest",
+    "transplantation": "Transplanting",
     "croissance": "Growth",
+    "recolte": "Harvest",
     "preparation_sol": "Soil preparation",
-    "transplantation": "Transplantation"
+    "pollinisation": "Pollination",
+    "developpement": "Development",
+    "maturite": "Maturation",
+    "recolte_debut": "Harvest start",
+    "recolte_fin": "Harvest end",
+    "entretien": "Maintenance",
+    "semis_sous_abri": "Indoor sowing",
+    "recolte_primeur": "Early harvest"
   },
 
   "status": {
     "excellent": "Excellent",
     "bon": "Good",
-    "moyen": "Average"
+    "risque": "Risky",
+    "deconseille": "Not recommended"
   }
 }

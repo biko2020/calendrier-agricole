@@ -2,10 +2,10 @@
   "title": "Calendario Agrícola",
   "region": "Marruecos – zona agrícola",
   "today": "Hoy",
-  "selectMonth": "Elegir un mes",
+  "selectMonth": "Seleccionar un mes",
   "categoriesTitle": "Categorías",
 
-  "locationError": "No se pudo detectar la ubicación automáticamente",
+  "locationError": "No se puede detectar la ubicación automáticamente",
   "defaultZone": "Zona predeterminada",
   "regionOf": "Región de",
   "agriculturalZone": "Zona agrícola",
@@ -14,14 +14,9 @@
   "manualSelection": "Selección manual",
   "country": "País",
 
-  "countries": {
-    "ma": "Marruecos",
-    "fr": "Francia"
-  },
-
   "temperature": "Temperatura",
   "precipitations": "Precipitaciones",
-  "sun": "Soleamiento",
+  "sun": "Insolación",
 
   "seasons": {
     "title": "Estación",
@@ -32,11 +27,27 @@
   },
 
   "zones": {
-    "aride": "Zona árida",
-    "semi-aride": "Zona semiárida",
     "mediterraneenne": "Zona mediterránea",
+    "temperee": "Zona templada",
     "tropicale": "Zona tropical",
-    "temperee": "Zona templada"
+    "equatoriale": "Zona ecuatorial",
+    "semiAride": "Zona semiárida",
+    "aride": "Zona árida",
+    "continentale": "Zona continental",
+    "subtropicale": "Zona subtropical"
+  },
+
+  "countries": {
+    "ma": "Marruecos",
+    "fr": "Francia",
+    "us": "Estados Unidos",
+    "br": "Brasil",
+    "in": "India",
+    "au": "Australia",
+    "eg": "Egipto",
+    "cn": "China",
+    "ng": "Nigeria",
+    "ar": "Argentina"
   },
   
   "culturesTitle": "Cultivos para",
@@ -44,33 +55,76 @@
   "noCulture": "No hay cultivos para esta categoría",
 
   "categories": {
-    "tous": "Todas",
+    "tous": "Todos",
     "cereales": "Cereales",
     "legumes": "Verduras",
     "fruits": "Frutas",
-    "aromatiques": "Aromáticas"
+    "aromatiques": "Aromáticas",
+    "legumineuses": "Legumbres"
   },
 
   "cultures": {
-    "title": "Cultivos",
     "ble": "Trigo",
     "orge": "Cebada",
     "tomates": "Tomates",
-    "laitue": "Lechuga"
+    "pommes_de_terre": "Papas",
+    "carottes": "Zanahorias",
+    "laitue": "Lechuga",
+    "epinards": "Espinacas",
+    "navets": "Nabos",
+    "courgettes": "Calabacines",
+    "aubergines": "Berenjenas",
+    "poivrons": "Pimientos",
+    "piments": "Chiles",
+    "haricots": "Judías",
+    "mais": "Maíz",
+    "pasteque": "Sandía",
+    "melon": "Melón",
+    "basilic": "Albahaca",
+    "coriandre": "Cilantro",
+    "persil": "Perejil",
+    "pois_chiches": "Garbanzos",
+    "feves": "Habas",
+    "riz": "Arroz",
+    "manioc": "Mandioca",
+    "banane": "Plátano",
+    "dattes": "Dátiles",
+    "sorgho": "Sorgo",
+    "mil": "Mijo",
+    "arachides": "Cacahuetes",
+    "cafe": "Café",
+    "canne_a_sucre": "Caña de azúcar",
+    "soja": "Soja",
+    "ail": "Ajo",
+    "oignons": "Cebollas",
+    "salades": "Ensaladas",
+    "grenadier": "Granada",
+    "grenades": "Granadas",
+    "figue_barbarie": "Higo chumbo",
+    "pois": "Guisantes"
   },
 
   "actions": {
     "plantation": "Plantación",
     "semis": "Siembra",
-    "recolte": "Cosecha",
+    "transplantation": "Trasplante",
     "croissance": "Crecimiento",
+    "recolte": "Cosecha",
     "preparation_sol": "Preparación del suelo",
-    "transplantation": "Trasplante"
+    "pollinisation": "Polinización",
+    "developpement": "Desarrollo",
+    "maturite": "Maduración",
+    "recolte_debut": "Inicio de cosecha",
+    "recolte_fin": "Fin de cosecha",
+    "entretien": "Mantenimiento",
+    "semis_sous_abri": "Siembra bajo cubierta",
+    "recolte_primeur": "Cosecha temprana"
   },
 
   "status": {
     "excellent": "Excelente",
     "bon": "Bueno",
-    "moyen": "Medio"
+    "risque": "Arriesgado",
+    "deconseille": "No recomendado"
   }
 }
