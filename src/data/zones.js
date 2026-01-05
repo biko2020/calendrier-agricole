@@ -12,7 +12,6 @@ export const COUNTRIES = [
   // Ajouter plus 
 ];
 
-
 export const ZONES = {
   mediterraneenne: 'zones.mediterraneenne',
   temperee: 'zones.temperee',

@@ -19,7 +19,8 @@ adapté à la région Casablanca-Settat.
 calendrier-agricole/
 │
 ├── public/
-│   └── favicon.svg
+│   ├── favicon.svg
+│   └── world-countries.geojson
 │
 ├── src/
 │   ├── assets/
@@ -28,7 +29,8 @@ calendrier-agricole/
 │   ├── components/
 │   │   ├── CalendrierAgricole.jsx
 │   │   ├── LanguageSwitcher.jsx 
-│   │   └── LocationSelector.jsx
+│   │   ├── LocationSelector.jsx
+│   │   └── WorldMap.jsx
 │   │
 │   ├── data/
 │   │   ├── categories.js
