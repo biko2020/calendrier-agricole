@@ -30,11 +30,53 @@ img:hover {
   transform: scale(1.1);
 }
 
-/* Conteneur Leaflet */
+/* ================================
+   FIX CARTE - FILTRE BLEU + INTERACTIONS
+   ================================ */
+
+/* Retirer tout filtre sur le conteneur Leaflet */
 .leaflet-container {
-  width: 100%;
-  height: 100%;
-  border-radius: 0.75rem; /* Harmonie avec tes cartes */
+  background: #a5bfdd !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+
+/* Assurer que les tuiles s'affichent correctement */
+.leaflet-tile-pane {
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+.leaflet-tile {
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+/* S'assurer que les pays sont cliquables */
+.leaflet-interactive {
+  cursor: pointer !important;
+  pointer-events: all !important;
+}
+
+/* Tooltip style */
+.country-tooltip {
+  background: rgba(0, 0, 0, 0.85) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  color: white !important;
+  padding: 8px 12px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Popup style */
+.leaflet-popup-content-wrapper {
+  border-radius: 12px !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+.leaflet-popup-content {
+  margin: 8px 12px !important;
 }
 
 /* Correction importante : icônes Leaflet par défaut (sinon carrés blancs) */
@@ -48,12 +90,6 @@ img:hover {
   border: none !important;
 }
 
-/* Style des popups Leaflet (optionnel mais joli) */
-.leaflet-popup-content-wrapper {
-  border-radius: 0.75rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  padding: 4px;
-}
 
 .leaflet-popup-content {
   margin: 12px 16px;

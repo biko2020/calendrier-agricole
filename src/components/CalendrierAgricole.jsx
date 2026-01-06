@@ -187,10 +187,8 @@ export default function CalendrierAgricole() {
           <WorldMap
             onZoneSelect={({ country, zoneAgricole }) => {
               setManualLocation({ country, zoneAgricole })
-              setMode('manual')
+              setMode('manual') 
             }}
-
-            
           />
         {/* Sélection du mois */}
         <div className="bg-white rounded-2xl shadow-lg p-6">
