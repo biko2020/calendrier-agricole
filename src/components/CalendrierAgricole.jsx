@@ -42,14 +42,14 @@ export default function CalendrierAgricole() {
   const finalLocation = mode === 'auto'
     ? autoLocation
     : {
-        country: manualLocation.country || 'MA',
-        region: manualLocation.country ? t(`countries.${manualLocation.country.toLowerCase()}`, { defaultValue: '' }) : '',
-        zoneAgricole: manualLocation.zoneAgricole || 'mediterraneenne',
-        temperature: null,
-        pluie: null,
-        ensoleillement: null,
-        saison: detectSeason()
-      }
+      country: manualLocation.country || 'MA',
+      region: manualLocation.country ? t(`countries.${manualLocation.country.toLowerCase()}`, { defaultValue: '' }) : '',
+      zoneAgricole: manualLocation.zoneAgricole || 'mediterraneenne',
+      temperature: null,
+      pluie: null,
+      ensoleillement: null,
+      saison: detectSeason()
+    }
 
   // RTL pour arabe
   useEffect(() => {
@@ -117,7 +117,7 @@ export default function CalendrierAgricole() {
                   </p>
                   {(finalLocation.temperature !== null || mode === 'auto') && (
                     <p className="text-sm text-gray-600 mt-2">
-                      🌡️ {t('temperature')} : {finalLocation.temperature ?? '—'}°C · 
+                      🌡️ {t('temperature')} : {finalLocation.temperature ?? '—'}°C ·
                       💧 {t('precipitations')} : {finalLocation.pluie ?? '—'} mm/an
                     </p>
                   )}
@@ -184,12 +184,20 @@ export default function CalendrierAgricole() {
 
         {/* Sélecteur carte countries geolocalisation */}
 
-          <WorldMap
-            onZoneSelect={({ country, zoneAgricole }) => {
-              setManualLocation({ country, zoneAgricole })
-              setMode('manual') 
-            }}
-          />
+        <WorldMap
+          onZoneSelect={(data) => {
+            console.log('ZONE SELECTED:', data)
+
+            setManualLocation({
+              country: data.country,
+              zoneAgricole: data.zoneAgricole
+            })
+
+            setMode('manual')
+          }}
+        />
+
+
         {/* Sélection du mois */}
         <div className="bg-white rounded-2xl shadow-lg p-6">
           <h2 className="font-semibold mb-4">{t('selectMonth')}</h2>
@@ -198,11 +206,10 @@ export default function CalendrierAgricole() {
               <button
                 key={index}
                 onClick={() => setMoisSelectionne(index)}
-                className={`py-3 px-4 rounded-lg font-medium transition-all ${
-                  moisSelectionne === index
+                className={`py-3 px-4 rounded-lg font-medium transition-all ${moisSelectionne === index
                     ? 'bg-green-600 text-white shadow-md'
                     : 'bg-gray-100 hover:bg-gray-200'
-                }`}
+                  }`}
               >
                 {nom}
               </button>
@@ -216,11 +223,10 @@ export default function CalendrierAgricole() {
           <div className="flex flex-wrap gap-3">
             <button
               onClick={() => setCategorieSelectionnee('tous')}
-              className={`flex items-center gap-2 px-5 py-3 rounded-xl font-medium transition-all ${
-                categorieSelectionnee === 'tous'
+              className={`flex items-center gap-2 px-5 py-3 rounded-xl font-medium transition-all ${categorieSelectionnee === 'tous'
                   ? 'bg-green-600 text-white shadow-md'
                   : 'bg-gray-100 hover:bg-gray-200'
-              }`}
+                }`}
             >
               🌾 {t('categories.tous')}
             </button>
@@ -228,11 +234,10 @@ export default function CalendrierAgricole() {
               <button
                 key={cat.id}
                 onClick={() => setCategorieSelectionnee(cat.id)}
-                className={`flex items-center gap-2 px-5 py-3 rounded-xl font-medium transition-all ${
-                  categorieSelectionnee === cat.id
+                className={`flex items-center gap-2 px-5 py-3 rounded-xl font-medium transition-all ${categorieSelectionnee === cat.id
                     ? 'bg-green-600 text-white shadow-md'
                     : cat.couleur + ' hover:opacity-80'
-                }`}
+                  }`}
               >
                 <span>{cat.icon}</span>
                 <span>{t(`categories.${cat.id}`)}</span>

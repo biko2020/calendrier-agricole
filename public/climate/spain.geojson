@@ -1,0 +1,26 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": "mediterraneenne"
+      },
+      "geometry": { "...": "..." }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": "semiAride"
+      },
+      "geometry": { "...": "..." }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": "aride"
+      },
+      "geometry": { "...": "..." }
+    }
+  ]
+}

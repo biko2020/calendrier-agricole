@@ -20,7 +20,12 @@ calendrier-agricole/
 │
 ├── public/
 │   ├── favicon.svg
-│   └── world-countries.geojson
+│   ├── world-countries.geojson
+│   └── climate
+│          ├── morocco.geojson
+│          ├── france.geojson
+│          ├── spain.geojson
+│          └── world-climate.geojson
 │
 ├── src/
 │   ├── assets/

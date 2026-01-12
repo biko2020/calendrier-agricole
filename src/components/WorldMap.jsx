@@ -1,119 +1,141 @@
 import { useEffect, useState } from 'react'
-import { MapContainer, TileLayer, GeoJSON } from 'react-leaflet'
+import { MapContainer, TileLayer, GeoJSON, useMap } from 'react-leaflet'
 import L from 'leaflet'
+import 'leaflet/dist/leaflet.css'
 
-import icon from 'leaflet/dist/images/marker-icon.png'
-import iconShadow from 'leaflet/dist/images/marker-shadow.png'
+import {
+  ZONE_COLORS,
+  ZONE_NAMES,
+  getCountryByCode,
+} from '../data/zones'
 
-delete L.Icon.Default.prototype._getIconUrl
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: icon,
-  iconUrl: icon,
-  shadowUrl: iconShadow
+/* ===================== UTILS ===================== */
+
+const getCountryFromFeature = (feature) => {
+  const iso = feature.id
+  if (!iso) return null
+  return getCountryByCode(iso)
+}
+
+/* ===================== STYLES ===================== */
+
+const countryStyle = (feature) => {
+  const country = getCountryFromFeature(feature)
+
+  return {
+    fillColor: country
+      ? ZONE_COLORS[country.zones[0]]
+      : '#e5e7eb',
+    weight: 1,
+    color: '#fff',
+    fillOpacity: 0.6,
+  }
+}
+
+const regionStyle = (feature) => ({
+  fillColor: ZONE_COLORS[feature.properties.zone] || '#999',
+  weight: 1,
+  color: '#333',
+  fillOpacity: 0.75,
 })
 
-import 'leaflet/dist/leaflet.css'
-import { COUNTRIES } from '../data/zones'
+/* ===================== FIT BOUNDS ===================== */
+
+function FitBounds({ geo }) {
+  const map = useMap()
+
+  useEffect(() => {
+    if (!geo) return
+    const layer = L.geoJSON(geo)
+    map.fitBounds(layer.getBounds(), { padding: [20, 20] })
+  }, [geo, map])
+
+  return null
+}
+
+/* ===================== COMPONENT ===================== */
 
 export default function WorldMap({ onZoneSelect }) {
-  const [geoData, setGeoData] = useState(null)
-  const [loading, setLoading] = useState(true)
+  const [worldGeo, setWorldGeo] = useState(null)
+  const [regionsGeo, setRegionsGeo] = useState(null)
+  const [currentCountry, setCurrentCountry] = useState(null)
 
   useEffect(() => {
     fetch('/world-countries.geojson')
-      .then(res => res.json())
-      .then(data => {
-        console.log('GeoJSON chargé avec succès')
-        setGeoData(data)
-        setLoading(false)
-      })
-      .catch(err => console.error('Erreur chargement GeoJSON', err))
+      .then(r => r.json())
+      .then(setWorldGeo)
   }, [])
 
-  // Fonction ultra-robuste pour trouver le code pays
-  const getCountryCode = (props) => {
-    // Liste exhaustive des propriétés possibles dans les GeoJSON Natural Earth / datasets
-    const candidates = [
-      props.iso_a2, props.ISO_A2, props.iso_a3?.slice(0,2), props.ISO_A3?.slice(0,2),
-      props.ADMIN?.slice(0,2), props.name?.slice(0,2),
-      props.code, props.CODE, props.ID, props.id
-    ]
+  const loadRegions = async (country) => {
+    const res = await fetch(country.adm1GeoJsonUrl)
+    const data = await res.json()
 
-    for (const candidate of candidates) {
-      if (candidate && candidate !== '-99' && candidate.length === 2) {
-        return candidate.toUpperCase()
-      }
-    }
-    return null
+    console.log('REGIONS LOADED:', data)
+    console.log('FIRST COORD:', data.features[0].geometry.coordinates[0][0])
+
+    setRegionsGeo(data)
   }
 
-  const getZoneColor = (zone) => ({
-    mediterraneenne: '#f59e0b',
-    temperee: '#10b981',
-    tropicale: '#22c55e',
-    semiAride: '#eab308',
-    aride: '#ef4444',
-    subtropicale: '#3b82f6',
-    continentale: '#6366f1',
-    equatoriale: '#16a34a',
-  }[zone] || '#9ca3af')
-
-  const countryStyle = (feature) => {
-    const code = getCountryCode(feature.properties)
-    const country = COUNTRIES.find(c => c.code === code)
-    const zone = country?.zones[0] || 'unknown'
-
-    return {
-      fillColor: getZoneColor(zone),
-      weight: 2,
-      color: 'white',
-      fillOpacity: 0.75,
-      interactive: true, // Important pour les clics
-    }
-  }
-
-  const onEachFeature = (feature, layer) => {
-    const props = feature.properties
-    const code = getCountryCode(props)
-    const name = props.NAME || props.name || props.ADMIN || props.admin || 'Pays inconnu'
-
-    const country = COUNTRIES.find(c => c.code === code)
+  const onEachCountry = (feature, layer) => {
+    const country = getCountryFromFeature(feature)
     if (!country) return
 
-    const zone = country.zones[0]
+    console.log('CLICK PAYS:', country.code)
 
     layer.on({
-      mouseover: (e) => e.target.setStyle({ weight: 5, color: '#000', fillOpacity: 0.9 }),
-      mouseout: (e) => layer.resetStyle(e.target),
       click: () => {
-        layer.bindPopup(`
-          <div style="text-align:center;padding:12px;font-family:system-ui;">
-            <strong>${name}</strong><br>
-            <span style="color:#16a34a;font-weight:600;">🌱 Zone : ${zone}</span>
-          </div>
-        `).openPopup()
+        setCurrentCountry(country)
+        loadRegions(country)
+      },
+    })
 
+    layer.bindTooltip(country.name, { sticky: true })
+  }
+
+const onEachRegion = (feature, layer) => {
+    const zone =
+      feature.properties.zone ||
+      feature.properties.ZONE ||
+      feature.properties.zone_agricole ||
+      'mediterraneenne' // fallback sûr
+
+    layer.on({
+      click: () => {
         onZoneSelect({
-          country: code,
-          zoneAgricole: zone
+          country: currentCountry.code,
+          zoneAgricole: zone,
         })
-      }
+      },
     })
   }
 
-  if (loading) return <div className="h-96 bg-gray-100 rounded-2xl flex items-center justify-center"><p>Chargement de la carte...</p></div>
+
+
+  if (!worldGeo) return <p>Chargement…</p>
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-6 my-8">
-      <h2 className="text-2xl font-bold text-center mb-4">🗺️ Carte Agricole Mondiale Interactive</h2>
-      <p className="text-center text-gray-600 mb-6">Cliquez sur un pays pour voir les cultures adaptées</p>
+    <MapContainer center={[20, 0]} zoom={2} style={{ height: 600 }}>
+      <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
-      <div className="h-96 md:h-[600px] rounded-xl overflow-hidden">
-        <MapContainer center={[20, 0]} zoom={2} style={{ height: '100%', width: '100%' }}>
-          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-          <GeoJSON data={geoData} style={countryStyle} onEachFeature={onEachFeature} />
-        </MapContainer>
-      </div>
-    </div>
+      {!regionsGeo && (
+        <GeoJSON
+          data={worldGeo}
+          style={countryStyle}
+          onEachFeature={onEachCountry}
+        />
+      )}
+
+      {regionsGeo && (
+        <>
+          <GeoJSON
+            data={regionsGeo}
+            style={regionStyle}
+            onEachFeature={onEachRegion}
+          />
+          <FitBounds geo={regionsGeo} />
+        </>
+      )}
+      
+    </MapContainer>
   )
 }
