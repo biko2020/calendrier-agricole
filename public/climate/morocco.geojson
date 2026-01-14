@@ -4,58 +4,397 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Nord Maroc",
-        "zone": "mediterraneenne"
+        "name": "Gharb (Plaine du Gharb)",
+        "zone": "mediterraneenne",
+        "cultures_principales": "Riz, Betterave sucrière, Maraîchage",
+        "superficie_agricole": "250000 ha",
+        "precipitation": "500-600 mm/an",
+        "irrigation": "Barrage Al Wahda",
+        "production_annuelle": "1.2M tonnes"
       },
       "geometry": {
         "type": "Polygon",
-        "coordinates": [
-          [
-            [-6.0, 35.5],
-            [-2.5, 35.5],
-            [-2.5, 33.5],
-            [-6.0, 33.5],
-            [-6.0, 35.5]
-          ]
-        ]
+        "coordinates": [[
+          [-6.2, 34.9],
+          [-5.8, 34.8],
+          [-5.6, 34.5],
+          [-5.8, 34.2],
+          [-6.2, 34.0],
+          [-6.5, 34.1],
+          [-6.6, 34.4],
+          [-6.4, 34.7],
+          [-6.2, 34.9]
+        ]]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Centre Maroc",
-        "zone": "semiAride"
+        "name": "Loukkos",
+        "zone": "mediterraneenne",
+        "cultures_principales": "Agrumes, Fraises, Tomates",
+        "superficie_agricole": "85000 ha",
+        "precipitation": "600-700 mm/an",
+        "irrigation": "Barrage Loukkos",
+        "production_annuelle": "450000 tonnes"
       },
       "geometry": {
         "type": "Polygon",
-        "coordinates": [
-          [
-            [-9.0, 33.5],
-            [-4.5, 33.5],
-            [-4.5, 31.5],
-            [-9.0, 31.5],
-            [-9.0, 33.5]
-          ]
-        ]
+        "coordinates": [[
+          [-5.9, 35.6],
+          [-5.5, 35.5],
+          [-5.3, 35.2],
+          [-5.5, 34.9],
+          [-5.8, 34.8],
+          [-6.2, 34.9],
+          [-6.3, 35.2],
+          [-6.2, 35.4],
+          [-5.9, 35.6]
+        ]]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Sud Maroc",
-        "zone": "aride"
+        "name": "Rif Oriental",
+        "zone": "mediterraneenne",
+        "cultures_principales": "Olivier, Amandier, Figuier",
+        "superficie_agricole": "120000 ha",
+        "precipitation": "400-500 mm/an",
+        "irrigation": "Pluvial dominant",
+        "production_annuelle": "180000 tonnes"
       },
       "geometry": {
         "type": "Polygon",
-        "coordinates": [
-          [
-            [-11.0, 31.5],
-            [-5.0, 31.5],
-            [-5.0, 27.0],
-            [-11.0, 27.0],
-            [-11.0, 31.5]
-          ]
-        ]
+        "coordinates": [[
+          [-4.8, 35.4],
+          [-4.2, 35.3],
+          [-3.8, 35.0],
+          [-3.5, 34.7],
+          [-3.8, 34.4],
+          [-4.3, 34.3],
+          [-4.7, 34.5],
+          [-5.0, 34.8],
+          [-4.8, 35.4]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Saïss (Plaine du Saïss)",
+        "zone": "mediterraneenne",
+        "cultures_principales": "Céréales, Olivier, Maraîchage",
+        "superficie_agricole": "220000 ha",
+        "precipitation": "450-550 mm/an",
+        "irrigation": "Nappes phréatiques",
+        "production_annuelle": "800000 tonnes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-5.2, 34.2],
+          [-4.8, 34.0],
+          [-4.5, 33.7],
+          [-4.8, 33.4],
+          [-5.3, 33.3],
+          [-5.7, 33.5],
+          [-5.9, 33.8],
+          [-5.6, 34.0],
+          [-5.2, 34.2]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chaouia",
+        "zone": "mediterraneenne",
+        "cultures_principales": "Blé, Orge, Légumineuses",
+        "superficie_agricole": "350000 ha",
+        "precipitation": "350-450 mm/an",
+        "irrigation": "Pluvial (Bour)",
+        "production_annuelle": "1.5M tonnes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-7.8, 33.6],
+          [-7.4, 33.5],
+          [-7.0, 33.3],
+          [-6.8, 33.0],
+          [-7.0, 32.6],
+          [-7.4, 32.5],
+          [-7.8, 32.6],
+          [-8.1, 32.9],
+          [-8.2, 33.2],
+          [-7.8, 33.6]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tadla",
+        "zone": "semiAride",
+        "cultures_principales": "Agrumes, Olivier, Blé",
+        "superficie_agricole": "120000 ha",
+        "precipitation": "300-400 mm/an",
+        "irrigation": "Barrage Bin El Ouidane",
+        "production_annuelle": "650000 tonnes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-6.5, 32.8],
+          [-6.2, 32.7],
+          [-5.9, 32.4],
+          [-6.0, 32.0],
+          [-6.3, 31.8],
+          [-6.7, 31.9],
+          [-6.9, 32.2],
+          [-6.8, 32.5],
+          [-6.5, 32.8]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Haouz (Plaine du Haouz)",
+        "zone": "semiAride",
+        "cultures_principales": "Olivier, Céréales, Agrumes",
+        "superficie_agricole": "180000 ha",
+        "precipitation": "250-350 mm/an",
+        "irrigation": "Seguias + Barrage Lalla Takerkoust",
+        "production_annuelle": "720000 tonnes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-8.4, 31.9],
+          [-8.0, 31.8],
+          [-7.6, 31.6],
+          [-7.3, 31.3],
+          [-7.5, 31.0],
+          [-7.9, 30.9],
+          [-8.3, 31.0],
+          [-8.6, 31.3],
+          [-8.7, 31.6],
+          [-8.4, 31.9]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Souss",
+        "zone": "semiAride",
+        "cultures_principales": "Agrumes, Primeurs, Bananier",
+        "superficie_agricole": "160000 ha",
+        "precipitation": "200-300 mm/an",
+        "irrigation": "Barrage Youssef Ben Tachfine",
+        "production_annuelle": "1.8M tonnes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-9.5, 30.6],
+          [-9.0, 30.5],
+          [-8.5, 30.3],
+          [-8.2, 30.0],
+          [-8.3, 29.6],
+          [-8.7, 29.5],
+          [-9.2, 29.6],
+          [-9.6, 29.9],
+          [-9.8, 30.2],
+          [-9.5, 30.6]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chtouka",
+        "zone": "semiAride",
+        "cultures_principales": "Primeurs, Tomates, Fraises",
+        "superficie_agricole": "35000 ha",
+        "precipitation": "150-250 mm/an",
+        "irrigation": "Puits + Barrage Aoulouz",
+        "production_annuelle": "850000 tonnes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-9.8, 30.2],
+          [-9.4, 30.0],
+          [-9.1, 29.7],
+          [-9.3, 29.4],
+          [-9.6, 29.2],
+          [-9.9, 29.3],
+          [-10.1, 29.6],
+          [-10.0, 29.9],
+          [-9.8, 30.2]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Massa",
+        "zone": "semiAride",
+        "cultures_principales": "Tomates, Melons, Bananes",
+        "superficie_agricole": "28000 ha",
+        "precipitation": "150-200 mm/an",
+        "irrigation": "Barrage Youssef Ben Tachfine",
+        "production_annuelle": "420000 tonnes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-10.0, 29.9],
+          [-9.7, 29.7],
+          [-9.5, 29.4],
+          [-9.6, 29.1],
+          [-9.9, 28.9],
+          [-10.2, 29.0],
+          [-10.3, 29.3],
+          [-10.2, 29.6],
+          [-10.0, 29.9]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tafilalet",
+        "zone": "aride",
+        "cultures_principales": "Palmier dattier, Henné, Céréales",
+        "superficie_agricole": "48000 ha",
+        "precipitation": "50-150 mm/an",
+        "irrigation": "Oasis (Khettaras)",
+        "production_annuelle": "120000 tonnes dattes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-5.0, 31.8],
+          [-4.5, 31.6],
+          [-4.2, 31.2],
+          [-4.3, 30.7],
+          [-4.6, 30.4],
+          [-5.1, 30.3],
+          [-5.5, 30.5],
+          [-5.6, 30.9],
+          [-5.3, 31.4],
+          [-5.0, 31.8]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ouarzazate (Draa)",
+        "zone": "aride",
+        "cultures_principales": "Palmier dattier, Safran, Amandier",
+        "superficie_agricole": "42000 ha",
+        "precipitation": "80-120 mm/an",
+        "irrigation": "Oasis + Barrage Mansour Eddahbi",
+        "production_annuelle": "95000 tonnes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-7.2, 31.0],
+          [-6.7, 30.8],
+          [-6.3, 30.5],
+          [-6.2, 30.1],
+          [-6.5, 29.7],
+          [-7.0, 29.6],
+          [-7.5, 29.7],
+          [-7.8, 30.1],
+          [-7.6, 30.6],
+          [-7.2, 31.0]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Guelmim (Oued Noun)",
+        "zone": "aride",
+        "cultures_principales": "Palmier dattier, Pastèque, Maraîchage",
+        "superficie_agricole": "22000 ha",
+        "precipitation": "50-100 mm/an",
+        "irrigation": "Nappes + Oueds",
+        "production_annuelle": "35000 tonnes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-10.3, 29.3],
+          [-9.9, 29.0],
+          [-9.6, 28.6],
+          [-9.8, 28.2],
+          [-10.2, 28.0],
+          [-10.6, 28.2],
+          [-10.8, 28.6],
+          [-10.7, 29.0],
+          [-10.3, 29.3]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Laâyoune (Sakia El Hamra)",
+        "zone": "aride",
+        "cultures_principales": "Maraîchage sous serre, Fourrage",
+        "superficie_agricole": "8500 ha",
+        "precipitation": "30-80 mm/an",
+        "irrigation": "Dessalement + Nappes",
+        "production_annuelle": "18000 tonnes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-12.8, 27.8],
+          [-12.3, 27.6],
+          [-11.8, 27.3],
+          [-11.5, 26.9],
+          [-11.7, 26.5],
+          [-12.2, 26.3],
+          [-12.7, 26.5],
+          [-13.0, 26.9],
+          [-13.1, 27.4],
+          [-12.8, 27.8]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dakhla",
+        "zone": "aride",
+        "cultures_principales": "Maraîchage primeurs, Pêche",
+        "superficie_agricole": "3200 ha",
+        "precipitation": "20-50 mm/an",
+        "irrigation": "Dessalement",
+        "production_annuelle": "12000 tonnes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-16.0, 23.8],
+          [-15.5, 23.6],
+          [-15.2, 23.3],
+          [-15.3, 22.9],
+          [-15.7, 22.7],
+          [-16.2, 22.8],
+          [-16.5, 23.1],
+          [-16.4, 23.5],
+          [-16.0, 23.8]
+        ]]
       }
     }
   ]

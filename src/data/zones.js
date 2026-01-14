@@ -61,7 +61,6 @@ export const COUNTRIES = [
     name: 'Maroc',
     nameKey: 'countries.ma',
     zones: ['mediterraneenne', 'semiAride', 'aride'],
-    // adm1GeoJsonUrl: 'https://raw.githubusercontent.com/wmgeolab/geoBoundaries/main/releaseData/gbOpen/MAR/ADM1/geoBoundaries-MAR-ADM1.geojson' 
     adm1GeoJsonUrl: '/climate/morocco.geojson',
   },
 
@@ -90,6 +89,39 @@ export const ZONE_COLORS = {
   continentale: '#6366f1',
   equatoriale: '#16a34a',
 }
+
+export const REGION_TO_ZONE = {
+  'Tangier-Tetouan-Al Hoceima': 'mediterraneenne',
+  'Oriental': 'mediterraneenne',
+  'Fès-Meknès': 'mediterraneenne',
+  'Rabat-Salé-Kénitra': 'mediterraneenne',
+  'Béni Mellal-Khénifra': 'semiAride',
+  'Casablanca-Settat': 'semiAride',
+  'Marrakech-Safi': 'semiAride',
+  'Drâa-Tafilalet': 'aride',
+  'Souss-Massa': 'aride',
+  'Guelmim-Oued Noun': 'aride',
+  'Laâyoune-Sakia El Hamra': 'aride',
+  'Dakhla-Oued Ed-Dahab': 'aride'
+};
+
+export const ZONE_STATS = {
+  mediterraneenne: {
+    precipitations: '400-800 mm/an',
+    temperature_moy: '15-20°C',
+    cultures_principales: 'Céréales, fruits, légumes'
+  },
+  semiAride: {
+    precipitations: '200-400 mm/an',
+    temperature_moy: '18-25°C',
+    cultures_principales: 'Tomates, pommes de terre, olives'
+  },
+  aride: {
+    precipitations: '<200 mm/an',
+    temperature_moy: '20-30°C',
+    cultures_principales: 'Dattes, sorgho, irrigation limitée'
+  }
+};
 
 // Fonction utilitaire pour obtenir une zone par ID
 export const getZoneById = (zoneId) => {
