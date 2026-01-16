@@ -115,12 +115,7 @@ export default function CalendrierAgricole() {
                     🌍 {t('agriculturalZone')} :
                     <strong className="text-green-700"> {getZoneTraduite(finalLocation.zoneAgricole)}</strong>
                   </p>
-                  {(finalLocation.temperature !== null || mode === 'auto') && (
-                    <p className="text-sm text-gray-600 mt-2">
-                      🌡️ {t('temperature')} : {finalLocation.temperature ?? '—'}°C ·
-                      💧 {t('precipitations')} : {finalLocation.pluie ?? '—'} mm/an
-                    </p>
-                  )}
+
                 </div>
               )}
             </div>
